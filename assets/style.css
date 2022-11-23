@@ -64,6 +64,31 @@ header {
     font-weight: 500;
 }
 
+.navbar-list li {
+    position: relative;
+    padding: 0;
+}
+
+.navbar-list li a::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.navbar-list li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+
+
 
 /* CARRITO */
 
@@ -96,17 +121,17 @@ header {
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);  
   }
   
-  .cart::-webkit-scrollbar {
+.cart::-webkit-scrollbar {
     display: none;
   }
   
-  .cart h2 {
+.cart h2 {
     color: black;
     font-size: 20px;
     font-weight: 600;
   }
   
-  .cart-item {
+.cart-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,19 +141,19 @@ header {
     border-radius: 10px;
   }
   
-  .cart-item img {
+.cart-item img {
     height: 70px;
     width: 70px;
     border-radius: 12px;
   }
   
-  .item-title {
+.item-title {
     color: black;
     font-weight: 600;
     font-size: 14px;
   }
 
-  .item-price {
+.item-price {
     background: linear-gradient(to right, #000dff, #000000);
     background-clip: text;
     color: transparent;
@@ -138,41 +163,42 @@ header {
   }
 
 
-  .divider {
+.divider {
     margin-top: 20px;
     border: 0.5px solid black;
   }
   
-  .cart-total {
+.cart-total {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
   }
   
-  .cart-total p {
+.cart-total p {
     font-weight: 700;
   }
   
-  .cart-total span {
+.cart-total span {
     font-weight: 400;
     font-size: 18px;
   }
   
   /*Ocultar/mostrar carrito*/
   
-  #cart-toggle,
-  #menu-toggle,
-  .menu-label {
+#cart-toggle,
+#menu-toggle,
+.menu-label {
     display: none;
-  }
+}
   
-  #cart-toggle:checked + .cart {
+#cart-toggle:checked + .cart {
     transform: translate(0%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-  }
+}
+
 
 main {
-    background: white;
+    background: rgb(244, 244, 244);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,7 +260,7 @@ main {
     gap: 20px;
 }
 
-.botones a{
+.boton{
     color: black;
     background: linear-gradient(to top, #00c6ff, #0072ff);
     border: 2px solid rgb(44, 181, 255);
@@ -244,10 +270,11 @@ main {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    transition:  .6s ease
+    transition:  .6s ease;
+    cursor: pointer;
 }
 
-.botones a:hover{
+.boton:hover{
     background: #86d5ff;
     border: 2px solid rgb(44, 181, 255);
     box-shadow: 0 0 10px 0 var(--primary) inset, 0 0 10px 4px var(--primary);
@@ -439,7 +466,7 @@ main {
 
 /* Seccion de Cotacto */
 
-.contact{
+#contact{
     margin-left: auto;
     margin-right: auto;
     padding: 20px;

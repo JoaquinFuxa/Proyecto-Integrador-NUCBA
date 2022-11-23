@@ -17,11 +17,12 @@
 
     .menu{
         display: block;
+        cursor: pointer;
     }
 
     .navbar-list {
         position: absolute;
-        top: 65px;
+        top: 50px;
         left: 5%;
         right: 5%;
         width: 90%;
@@ -40,16 +41,6 @@
     .navbar-list a{
         font-size: 18px;
         color: rgb(0, 0, 0);
-    }
-
-    .menu-label {
-        display: flex;
-        cursor: pointer;
-    }
-
-    .menu-label img {
-        height: 20px;
-        width: 25px;
     }
 
     #menu-toggle:checked + .navbar-list {
