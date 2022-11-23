@@ -19,16 +19,48 @@
     <header>
       <img src="./assets/img/logo2.png" alt="LogoPagina" class="logo" />
       <nav class="navbar">
-        <label for="menu-toggle"><i class="fas fa-bars"></i></label>
+        <label for="menu-toggle">
+          <img
+            src="./assets/img/Hamburger_icon.svg.png"
+            alt="MenuHamburguesa"
+            class="menu"
+          />
+        </label>
         <input type="checkbox" id="menu-toggle" />
         <ul class="navbar-list">
           <li><a href="#hero">Inicio</a></li>
-          <li><a href="#">Nostros</a></li>
-          <li><a href="#">Produtos</a></li>
+          <li><a href="#info">Nostros</a></li>
+          <li><a href="#productos">Produtos</a></li>
           <li><a href="#contact">Contacto</a></li>
-          <li><a href="">Login</a></li>
-          <li><a href="">Register</a></li>
+          <li><a href="./pages/login.html">Login</a></li>
+          <li><a href="./pages/register.html">Register</a></li>
         </ul>
+
+        <label for="cart-toggle" class="cart-label">
+          <i class="fa-solid fa-cart-shopping cart-icon"></i>
+        </label>
+        <input type="checkbox" id="cart-toggle" />
+        <div class="cart">
+          <h2>Tu compra</h2>
+
+          <div class="cart-item">
+            <img src="./assets/img/sm-g780_g781_s20fe_front_zg.png" alt="S20" />
+            <div class="item-info">
+              <h3 class="item-title">Samsung S20</h3>
+              <span class="item-price">100.000$</span>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <div class="cart-total">
+            <p>Total:</p>
+            <span>100.000$</span>
+          </div>
+          <div class="botones">
+            <a>Comprar</a>
+          </div>
+        </div>
+        <div class="overlay"></div>
       </nav>
     </header>
     <main>
@@ -38,7 +70,7 @@
           <h1>Elige tecnología, Elige NovaTech</h1>
           <p>El teléfono de tus sueños lo encontras aquí</p>
           <div class="botones">
-            <a href="#">Let's go</a>
+            <a href="#productos">Let's go</a>
             <a href="#info">Learn More</a>
           </div>
         </div>
