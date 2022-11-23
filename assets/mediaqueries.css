@@ -1,4 +1,8 @@
 @media (max-width: 780px) {
+    #contact {
+        width: 90%;
+    }
+    
     .contact-conteiner{
         display: block;
         background: linear-gradient(to bottom, rgba(57,162,251,1) 0%, rgba(98,217,249,1) 50%, rgba(55,98,252,1) 100%);
