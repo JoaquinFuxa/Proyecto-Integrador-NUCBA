@@ -34,6 +34,7 @@ header {
     top: 16px;
     z-index: 2;
     border-radius: 20px;
+    animation: fade 2.2s ease-in, slide-down 3s ease-in-out;
 }
 
 .logo {
@@ -256,10 +257,6 @@ main {
 
 .botones {
     animation: fade 2s ease-in, slide-up 2s ease-in-out;
-}
-
-header {
-    animation: fade 1s ease-in, slide-down 1.5s ease-in-out;
 }
 
 .botones {
@@ -525,7 +522,6 @@ header {
     color: #ffff;
     border-bottom: 1px solid #0300ad;
 }
-
 
 .contact-info h4,
 .contact-info ul,
