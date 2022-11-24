@@ -27,6 +27,7 @@ body {
     border-radius: 12px;
     box-sizing: border-box;
     padding: 10px;
+    animation: fade 1.4s ease-in, slide-down 1.2s ease-in-out;
 }
 
 .register-box {
@@ -41,6 +42,7 @@ body {
     border-radius: 12px;
     box-sizing: border-box;
     padding: 10px;
+    animation: fade 1.4s ease-in, slide-down 1.2s ease-in-out;
 }
 
 .logo {
@@ -115,4 +117,22 @@ body {
 
 .links:hover {
     color: white;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }

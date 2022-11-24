@@ -19,6 +19,8 @@ body {
     justify-content: center;
 }
 
+/* HEADER */
+
 header {
     background: linear-gradient(to top, #00c6ff, #0072ff);
     width: 100%;
@@ -86,9 +88,6 @@ header {
     transform-origin: bottom left;
     transform: scaleX(1);
 }
-
-
-
 
 /* CARRITO */
 
@@ -183,8 +182,6 @@ header {
     font-size: 18px;
   }
   
-  /*Ocultar/mostrar carrito*/
-  
 #cart-toggle,
 #menu-toggle,
 .menu-label {
@@ -196,6 +193,7 @@ header {
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
+/* HERO */
 
 main {
     background: rgb(244, 244, 244);
@@ -249,8 +247,20 @@ main {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    transition: 0.2s;
 }
 
+.hero-info h1, .hero-info p{
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
+}
+
+.botones {
+    animation: fade 2s ease-in, slide-up 2s ease-in-out;
+}
+
+header {
+    animation: fade 1s ease-in, slide-down 1.5s ease-in-out;
+}
 
 .botones {
     display: flex;
@@ -281,6 +291,7 @@ main {
     border-radius: 20px;
 }
 
+/* SECCION INFO */
 
 #info {
     padding: 90px 0;
@@ -296,6 +307,7 @@ main {
     font-size: 32px;
     font-weight: 800;
     text-align: center;
+    animation: fade 1s ease-in, slide-right 1.4s ease-in-out;
 }
 
 #info h3 {
@@ -303,6 +315,7 @@ main {
     font-weight: 400;
     max-width: 800px;
     text-align: center;
+    animation: fade 1s ease-in, slide-left 1.4s ease-in-out;
 }
 
 .info-cards-container {
@@ -312,6 +325,7 @@ main {
     text-align: center;
     flex-wrap: wrap;
     gap: 20px;
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
 }
 
 .info-card {
@@ -330,23 +344,12 @@ main {
     transform: scale(1.06);
 }
 
-.info-card:first-child{
-    background-image: url('./img/1568712199_591499_1568712749_noticia_normal_recorte1.jpg');
+.info-card {
+    background-image: url('./img/fondo-abstracto-celeste_1077-3.webp');
     background-position: center;
     background-size: cover;
 }
 
-.info-card:nth-child(2) {
-    background-image: url('./img/garantia.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-.info-card:last-child {
-    background-image: url('./img/62756f312c411_700_462!.jpg');
-    background-position: center;
-    background-size: cover;
-}
 .texto {
     display: flex;
     flex-direction: column;
@@ -368,6 +371,7 @@ main {
     color: black;
 }
 
+/* SECCION PRODUCTOS */
 
 #productos {
     display: flex;
@@ -464,7 +468,7 @@ main {
 }
 
 
-/* Seccion de Cotacto */
+/* SECCION CONTACTO */
 
 #contact{
     margin-left: auto;
@@ -484,6 +488,7 @@ main {
 }
 
 .contact-conteiner {
+    border-radius: 24px;
     box-shadow: 0 0 30px 0 black;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -533,6 +538,7 @@ main {
     padding: .3em;
 }
 
+/* FOOTER */
 
 footer {
     width: 100%;
@@ -547,10 +553,15 @@ footer {
     padding: 20px 0;
 }
 
-footer a{
+.footer-links a{
     color: black;
     font-weight: 400;
     font-size: 14px;
+    transition: 0.4s;
+}
+
+.footer-links a:hover{
+    color: white;
 }
 
 .footer-links{
@@ -558,6 +569,9 @@ footer a{
     justify-content: center;
     gap: 20px;
 }
+
+
+/* SCROLLBAR */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -571,4 +585,51 @@ footer a{
 
 ::-webkit-scrollbar-track {
     background: #303531;
+}
+
+/* ANIMACIONES */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translatex(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translatex(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
